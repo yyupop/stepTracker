@@ -1,3 +1,4 @@
+// Лишний неиспользованный импорт, надо удалить
 import java.util.Scanner;
 public class Converter {
     int convertToKm(int steps) {
