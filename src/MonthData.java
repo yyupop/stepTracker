@@ -3,10 +3,7 @@ public class MonthData {
     int bestSeries(int goalByStepsPerDay) {
         int current =0;
         int finalSeries = 0;
-        // Алгоритм описан корректно, все правильно
-        // Но мне не очень понятно почему переменные так называются
-        // Тут почему-то переменная, которая хранит текущую серию называется финальной
-        // , а переменная, которая хранится финальную(итоговую) называется текущей
+
         for (int i = 0; i < days.length; i ++) {
             if (days[i] >= goalByStepsPerDay) {
                 current++;

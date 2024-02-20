@@ -6,9 +6,7 @@ public class Main {
         StepTracker stepTracker = new StepTracker(scanner);
         while (true) {
             printMenu();
-            // Название переменной не очень подходящее
-            // Стараемся избавиться от однобуквенных переменных
-            // Здесь подходит command
+
             int command = scanner.nextInt();
             if (command == 1) {
                 stepTracker.addNewNumberStepsPerDay();

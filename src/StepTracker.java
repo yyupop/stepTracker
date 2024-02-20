@@ -1,8 +1,7 @@
 import java.util.Scanner;
 public class StepTracker {
 
-    // Что-то здесь произошло с отступами
-    // Все остальное в этом классе замечательно, умница!
+
     int goalByStepsPerDay = 10000;
     MonthData[] monthToData = new MonthData[12];
     Scanner scanner;
