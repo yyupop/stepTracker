@@ -4,8 +4,8 @@ public class StepTracker {
     // Что-то здесь произошло с отступами
     // Все остальное в этом классе замечательно, умница!
     int goalByStepsPerDay = 10000;
-     MonthData[] monthToData = new MonthData[12];
-     Scanner scanner;
+    MonthData[] monthToData = new MonthData[12];
+    Scanner scanner;
 
     public StepTracker(Scanner scan) {
         scanner = scan;
@@ -13,6 +13,7 @@ public class StepTracker {
             monthToData[i] = new MonthData();
         }
     }
+
     public void changeStepGoal() {
         System.out.println("Введите новое значение цели шагов на день");
         int newGoal = scanner.nextInt();
@@ -23,6 +24,7 @@ public class StepTracker {
             System.out.println("Цель успешно изменена");
         }
     }
+
     public void addNewNumberStepsPerDay() {
         System.out.println("Введите номер месяца от 1 до 12:");
         int monthNumber = scanner.nextInt();
@@ -46,6 +48,7 @@ public class StepTracker {
         month.saveSteps(day, steps);
         System.out.println("Данные сохранены");
     }
+
     void printStatistic() {
         System.out.println("Введите номер месяца (от 1 до 12):");
         int monthNumber = scanner.nextInt();
@@ -54,7 +57,7 @@ public class StepTracker {
             return;
         }
 
-        MonthData month  = monthToData[monthNumber - 1];
+        MonthData month = monthToData[monthNumber - 1];
 
 
         System.out.println("Количество пройденных шагов по дням:");
@@ -67,7 +70,7 @@ public class StepTracker {
         int maxSteps = month.maxSteps();
         System.out.println("Максимальное пройденное количество шагов в месяце: " + maxSteps);
 
-        double averageSteps =  sumSteps / month.days.length;
+        double averageSteps = sumSteps / month.days.length;
         System.out.println("Среднее количество шагов: " + averageSteps);
 
         Converter converter = new Converter();
@@ -80,5 +83,5 @@ public class StepTracker {
         int bestSeries = month.bestSeries(goalByStepsPerDay);
         System.out.println("Лучшая серия: " + bestSeries);
     }
-
 }
+

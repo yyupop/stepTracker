@@ -9,14 +9,14 @@ public class Main {
             // Название переменной не очень подходящее
             // Стараемся избавиться от однобуквенных переменных
             // Здесь подходит command
-            int i = scanner.nextInt();
-            if (i == 1) {
+            int command = scanner.nextInt();
+            if (command == 1) {
                 stepTracker.addNewNumberStepsPerDay();
-            } else if (i == 2){
+            } else if (command == 2){
                 stepTracker.changeStepGoal();
-            } else if (i == 3){
+            } else if (command == 3){
                 stepTracker.printStatistic();
-            } else if (i == 4) {
+            } else if (command == 4) {
                 break;
             }
         }

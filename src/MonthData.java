@@ -9,18 +9,18 @@ public class MonthData {
         // , а переменная, которая хранится финальную(итоговую) называется текущей
         for (int i = 0; i < days.length; i ++) {
             if (days[i] >= goalByStepsPerDay) {
-                finalSeries++;
+                current++;
             } else {
-                if (current< finalSeries) {
-                    current = finalSeries;
+                if (finalSeries< current) {
+                    finalSeries = current;
 
                 }
-                finalSeries = 0;
+                current = 0;
             }
         }
-        if (finalSeries > current)
-            current = finalSeries;
-        return current;
+        if (current > finalSeries)
+            finalSeries = current;
+        return finalSeries;
     }
     void saveSteps(int day, int steps) {
         days[day - 1] += steps;
