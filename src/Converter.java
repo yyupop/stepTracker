@@ -7,8 +7,6 @@ public class Converter {
     }
 
     int convertStepsToKilocalories(int steps) {
-        // Здесь аналогично
-        int kilocalories = steps * 50 / 1000;
-        return kilocalories;
+        return  steps * 50 / 1000;
     }
 }
